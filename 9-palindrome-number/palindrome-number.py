@@ -1,11 +1,13 @@
-class Solution:
-    def isPalindrome(self, x: int) -> bool:
-        x = str(x)
-        n = int(len(x)/2)
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        str_x = str(x)
+        n = len(str_x)
 
-        for i in range(n):
-            print(i)
-            if x[i] != x[-(i+1)]:
+        for i in range((n//2)):
+            if str_x[i] != str_x[-(i+1)]:
                 return False
-
         return True
